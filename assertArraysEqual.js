@@ -4,13 +4,13 @@ const failedLog = "[First Array] !=== [Second Array]"
 // FUNCTION IMPLEMENTATION
 const assertArraysEqual = function(firstArray, secondArray) {
   if (firstArray.length !== secondArray.length) {
-    return `🛑 Assertion Failed: ${failedLog}`;
+    return console.log(`🛑 Assertion Failed: ${failedLog}`);
   };
   for (let i = 0; i < firstArray.length; i++) {
     if (firstArray[i] !== secondArray[i]) {
-      return `🛑 Assertion Failed: ${failedLog}`;
+      return console.log(`🛑 Assertion Failed: ${failedLog}`);
     }
   };
-  return `✅ Assertion Passed: ${passedLog}`;
+  return console.log(`✅ Assertion Passed: ${passedLog}`);
 };
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
