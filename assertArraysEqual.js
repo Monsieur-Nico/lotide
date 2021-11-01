@@ -1,16 +1,14 @@
-const passedLog = "[First Array] === [Second Array]"
-const failedLog = "[First Array] !=== [Second Array]"
+const eqArrays = require('./eqArray');
 
-// FUNCTION IMPLEMENTATION
-const assertArraysEqual = function(firstArray, secondArray) {
-  if (firstArray.length !== secondArray.length) {
-    return console.log(`🛑 Assertion Failed: ${failedLog}`);
-  };
-  for (let i = 0; i < firstArray.length; i++) {
-    if (firstArray[i] !== secondArray[i]) {
-      return console.log(`🛑 Assertion Failed: ${failedLog}`);
-    }
-  };
-  return console.log(`✅ Assertion Passed: ${passedLog}`);
+const assertArraysEqual = function(actual, expected) {
+  const passedLog = `[${actual}] === [${expected}]`;
+  const failedLog = `[${actual}] !== [${expected}]`;
+
+  if (eqArrays(actual, expected)) {
+    console.log(`✅ Assertion Passed: ${passedLog}`);
+  } else {
+    console.log(`🛑 Assertion Failed: ${failedLog}`);
+  }
 };
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
+
+module.exports = assertArraysEqual;
