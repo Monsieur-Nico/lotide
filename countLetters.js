@@ -1,15 +1,3 @@
-const passedLog = "[actual] === [expected]"
-const failedLog = "[actual] !=== [expected]"
-
-// FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${passedLog}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${failedLog}`);
-  }
-};
-
 const countLetters = function(someString) {
   const result = {};
   someString = someString.replace(' ', '');
@@ -24,8 +12,8 @@ const countLetters = function(someString) {
   return result;
 };
 
-//Test code
-const result1 = countLetters("lighthouse in the house");
-assertEqual(result1["l"], 1);
-assertEqual(result1["i"], 2);
-assertEqual(result1["e"], 3);
+module.exports = countLetters;
+// const result1 = countLetters("lighthouse in the house");
+// assertEqual(result1["l"], 1);
+// assertEqual(result1["i"], 2);
+// assertEqual(result1["e"], 3);
