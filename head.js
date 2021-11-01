@@ -1,19 +1,11 @@
-const passedLog = "[actual] === [expected]"
-const failedLog = "[actual] !=== [expected]"
+const assertEqual = require('./assertEqual');
 
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${passedLog}`);
+function head(array) {
+  if (!array.length) {
+    return "Empty array";
   } else {
-    console.log(`🛑 Assertion Failed: ${failedLog}`);
+    return array.shift();
   }
 };
 
-function head (array) {
-  const goal = array.shift();
-  return goal;
-};
-
-assertEqual(head([5]), 5);
-assertEqual(head([]), "Hello");
+module.exports = head;

@@ -2,7 +2,7 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   const passedLog = `[${actual}] === [${expected}]`;
-  const failedLog = `[${actual}] !=== [${expected}]`;
+  const failedLog = `[${actual}] !== [${expected}]`;
 
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${passedLog}`);
@@ -11,6 +11,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Bootcamp", "Bootcamp");
-//assertEqual(1, "1");
+module.exports = assertEqual;
