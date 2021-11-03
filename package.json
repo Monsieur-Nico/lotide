@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@monsieur-nico/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "This project was created and published by me as part of my learnings at Lighthouse Labs.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Monsieur-Nico/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nicolas Alkhoury, aka monsieur-nico",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Monsieur-Nico/lotide/issues"

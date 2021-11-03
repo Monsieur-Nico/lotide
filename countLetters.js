@@ -1,8 +1,8 @@
 const countLetters = function(someString) {
   const result = {};
-  someString = someString.replace(' ', '');
+  noSpaces = someString.replace(' ', '');
 
-  for (const letter of someString) {
+  for (const letter of noSpaces) {
     if (!result[letter])
       result[letter] = 1;
     else
@@ -13,7 +13,3 @@ const countLetters = function(someString) {
 };
 
 module.exports = countLetters;
-// const result1 = countLetters("lighthouse in the house");
-// assertEqual(result1["l"], 1);
-// assertEqual(result1["i"], 2);
-// assertEqual(result1["e"], 3);
